@@ -1,0 +1,74 @@
+XIAOJIE XING
+ID:
+
+YE WANG
+ID:
+
+Final Project: Classic Raiden
+
+Acknowledgement:
+* the breadth_first_search file and graph file refers to the sample code from google drive
+* all of other codes are implemented by ourselves
+* the image of hero plane is from https://www.pinterest.ca/pin/563372234617423546/
+* the images of enemies planes and boss are all from http://opengameart.org
+* the image of background is from http://uspstrackingtool.com/background/galaxy/
+* used Photoshop to process every image taking from web
+* all the files of music and sound are from http://www.aigei.com/music/
+
+Description:
+* This program is a classic raiden game that runs by pygame. Raiden is a scrolling shooter 
+game. In our game, the player will control a hero jet to battle the enemies and survive in
+the battle. The player will use directions keys to control the jet and space bar to shoot
+the bullet. 
+
+* As you run the game, you can see a start menu that says press ENTER to log in or press ESC 
+to quit. And there are also the instructions of how to play at the bottom.
+
+* As you press ENTER to start the game, you should type your name and press ENTER to confirm.
+
+* Then you can see a rank list that shows top players in your friend zone and the best score 
+you got. If it is the first time that you use this name to play our game, only your own name 
+will be shown on the rank list. Then, you can press space bar to add new friend. We use Graph 
+and BSF to achieve this.We use breadth first search to search all of friends and friends' friends to be related to you. 
+
+* After adding a friend, you can see your friend on the rank list if his score is in the top 
+9 among all of your friends. Moreover, it will automatically add your friend's friends on the 
+rank list too. 
+
+* Then you can press ENTER to start the game. You have totally three lives. There are totally 
+two different types of enemies planes. They will spawn randomly and shoot automatically.
+
+* If you get any scores that are divisible by 500, the boss will be spawned. At the beginning, 
+the boss will only shoot one type of bullets which can be formed a circle with increasing 
+radius. If the health of boss is below 100, the boss will shoot missiles. Those missiles will 
+chase the position of the hero plane all the time, but the bullets of hero plane can destroy 
+those missiles. We use mahanttan distance and trigonometry to implement the algorithm of 
+missiles. 
+
+* After you run out of three lives, it will display the ending menu. After you quit the game, 
+the best score you get and the relationship with your friends will be written in two text file
+which are userData.txt and userRelations.txt respectively. We will build the new graph during
+the next start of the game. The graph we build is an undirected graph.
+
+UPDATE SINCE DEMO:
+* Rewrite classes for planes used inhertance to reduce hard coding
+* Implemented different game difficulty when user gets higher score
+* Updated missiles tracing path algorithms for more smoth curve path movement
+* Updated garbage collection mechnism. Set boundaries for both enemies planes and all bullets,
+  and check boundries every fame. When bullets or enemies planes objects are out of boudaries,
+  delete and disable objects.
+
+WARNING:
+* Make sure python 3.5 and above version is installed
+* Make sure correct version of pygame for python 3.5 or above is installed
+* The game will only run once, to start new game, the old game window must be closed
+
+INSTRUCTION TO RUN THE CODE:
+1. Load FinalProject folder into Linux VM
+2. Direct to main.py file in terminal
+3. Type command 'python3 main.py' in terminal
+4. Press ENTER to log in
+5. Type your name
+6. Press space bar to add new friend or press ENTER to start directly
+7. Direction keys for controling the plane and space bar for shooting
+8. Press ESC to quit
